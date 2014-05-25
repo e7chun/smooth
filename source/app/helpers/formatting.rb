@@ -1,5 +1,5 @@
 helpers do
-  def em(text)
-    "<em>#{text}</em>"
+  def current_user
+    session[:user_id]
   end
 end

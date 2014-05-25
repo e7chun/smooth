@@ -1,7 +1,9 @@
-@font-face { 
-	font-family:'Trajan Pro'; 
-	src:url(http://www.e7chun.com/portfolio/fonts/TrajanPro-Regular.ttf);
-} 
+@font-face {
+	font-family:'Hipster Script Pro';
+	src:url(http://www.e7chun.com/portfolio/fonts/HipsterScriptPro.otf);
+	font-family:'Penna';
+	src:url(http://www.e7chun.com/portfolio/fonts/penna.otf);
+}
 
 html {
 	font-family: 'Penna', sans-serif;
@@ -9,23 +11,27 @@ html {
 
 ul {
 	list-style-type: none;
-
 }
 
 .login_bar ul{
 	float: right;
 }
 
+#registration {
+	display: visible;
+}
 
+#registered {
+	margin-bottom: 0.5em;
+}
 
-ul #not_bar{
+#not_bar{
 	padding-top: 1em;
 	padding-bottom: 1em;
+	margin-top: 3em;
 }
 
 .notificationbar {
-	display:none;
-	background-image: url('http://www.thefinishingtouchny.com/wp-content/uploads/2012/05/Black-Metallic-Eyelash.jpg');
 	background-size: contain;
 	width: 100%;
 	float: left;
@@ -33,18 +39,10 @@ ul #not_bar{
 	padding: 0;
 }
 
-#login_bar_ul li {
+.notificationbar li {
 	display: inline;
-}
-
-li .notbar{
-	text-align: center;
-	margin-right: 3em;
-
-}
-
-li #registration {
-
+	margin-right: 1em;
+	margin-top: 1em;
 }
 
 a {
@@ -57,7 +55,7 @@ a {
 
 #types table {
 	margin-left: 3em;
-	margin-top: 3em;
+	margin-top: 2em;
 }
 
 
@@ -82,21 +80,42 @@ input::-webkit-input-placeholder {
 	font-size: 1.24em;
 }
 
-
 #login_bar_ul input {
 	color: #DBDBDB;
 	border: none;
 	width: 10em;
 	height: 2em;
 	padding-left: 0.5em;
-	/*background: rgba(0, 1, 0, 1);*/
 	background: rgba(0,0,3,1);
-	margin-top: 1em;
-
+	margin-top: 2.5em;
 }
 
+#login_bar_ul .button {
+	margin-right: 2em;
+	margin-bottom: 1em;
+	width: 7em;
+	background-color: #C0C0C0;
+	color: #0A0A0A;
+}
 
+#setting {
+	display: table-cell;
+	margin-top: 2em;
+}
 
+#setting li{
+	display: inline;
+	margin-right: 2em;
+	font-size: 2em;
+	border-right: 1px solid #C0C0C0;
+	vertical-align: center;
+}
+
+#setting li a {
+	margin-top: 3em;
+	color: #C0C0C0;
+	padding-right: 1em;
+}
 
 form {
 	float:right;
@@ -121,38 +140,34 @@ form {
 	background-color: #C0C0C0;
 }
 
-
-#login_bar_ul .button {
-	margin-right: 2em;
-	margin-bottom: 10em;
-	width: 7em;
-	background-color: #C0C0C0;
-	color: #303030;
-}
-
 #logo {
 	font-family: 'Hipster Script Pro', sans-serif;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
 	color: white;
 	float: left;
-	margin-left: 6em;
-	margin-top: 1em;
-	font-size: 2em;
+	position: auto;
+	margin-left: 4em;
+	margin-top: -0.4em;
+	font-size: 4em;
+	display: table-cell;
+	padding-top: 0.2em;
 }
 
 .login_bar {
 	height: 40px;
-	background-image: url('../img/dark_mosaic.png');
-	opacity: 0.9; 
-	padding-bottom: 4em;
+	background-image: url('../img/stardust.png');
+	opacity: 0.9;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	width: 100%;
-	display: inline-block;
+	display: table;
 }
 
-#blurb {
+.blurb {
 	margin-top: 2em;
 	font-size: 3em;
 	margin-bottom: 0em;
+	color: #474747;
 }
 
 h3 {
@@ -160,5 +175,14 @@ h3 {
 	font-size: 2em;
 	color: #7F7F7F;
 }
+
+#logout {
+	margin-top: 2.5em;
+	margin-right: 3em;
+	width: 7em;
+	background-color: #C0C0C0;
+	color: #0A0A0A;
+}
+
 
 

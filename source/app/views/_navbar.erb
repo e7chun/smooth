@@ -1,0 +1,17 @@
+<div class="login_bar">
+    <div id="logo">smooth</div>
+
+    <%if current_user%>
+      <ul id="setting">
+        <li><a href="/<%=session[:user_id]%>/settings">Settings</a></li>
+        <li><a href='/logout'>Log Out</a></li>
+      </ul>
+    <%else%>
+      <form method="post" action="/login" id="login_bar_ul">
+        <input type="text" placeholder="username" name="username">
+        <input type="password" placeholder="password" name="password">
+        <input type="submit" class="button" value="login">
+      </form>
+    <%end%>
+
+</div>

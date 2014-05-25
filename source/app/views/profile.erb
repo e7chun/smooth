@@ -1,34 +1,13 @@
-<div class="container">
-    <h1><img src="http://icons.iconarchive.com/icons/femfoyou/angry-birds/256/angry-bird-yellow-icon.png">&nbsp;&nbsp;Angry Tweets</h1>
-  <% if session[:user_id] == @user.id %>
-  	<header>
-  		Hello, <%= @user_name %>
-  	</header>
+<center><h1 class="blurb">Welcome <%=@user.name%></h1></center>
 
-    <a href='/logout'>Logout</a>
 
-  	<form action="/tweet/new" method="post" accept-charset="utf-8">
-    		<textarea maxlength="140" name="tweet" rows="10" cols="30" placeholder="Tweet here..."></textarea>
-    		<input type="submit" value="New tweet">
-  	</form>
-
-    <ul>
-      <% @user_tweets.each do |tweet| %>
-        <li><%= tweet.content %></li>
-      <% end %>
+<div class="notificationbar">
+  <center>
+    <ul id="not_bar">
+      <li id="facebook" class="notbar"><a href="http://www.facebook.com"><img src="../img/facebook-icon.png"></a></li>
+      <li id="twitter" class="notbar"><a href="http://www.twitter.com"><img src="../img/Twitter-Icon.png"></a></li>
+      <li id="tumblr" class="notbar"><a href="http://www.tumblr.com"><img src="../img/Tumblr-Icon.png"></a></li>
+      <li id="instagram" class="notbar"><a href="http://www.instagram.com"><img src="../img/Instagram-Icon.png"></a></li>
     </ul>
-  <% else %>
-    <header>
-
-     <%= @user_name %>'s News Feed <br>
-     <a href ="/follow-action">Follow</a>
-    </header>
-  <table>
-    <% @user_tweets.each do |tweet| %>
-      <tr>
-          <td><%= tweet.content %></td>
-      </tr>
-    <% end %>
-  </table>
-  <%end%>
+  </center>
 </div>

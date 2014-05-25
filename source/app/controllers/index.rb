@@ -1,26 +1,25 @@
 # Home
 
 get '/' do
-
   erb :index
 end
 
 post '/register' do
   @user = User.create(params)
-  redirect "/#{@user.id}/"
+  redirect "/#{@user.id}"
 end
 
 post '/login' do
   @user = User.find_by_username(params[:username])
   if @user && (@user.password == params[:password])
     session[:user_id] = @user.id
-    redirect "/#{@user.id}/"
+    redirect "/#{@user.id}"
   else
     redirect '/'
   end
 end
 
-get '/:id/' do
+get '/:id' do
   if current_user
     @user = User.find(current_user)
   end
@@ -31,7 +30,7 @@ get '/:id/settings' do
   erb :settings
 end
 
-get '/logout' do
+get '/:id/logout' do
   session.clear
   redirect '/'
 end

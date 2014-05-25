@@ -1,17 +1,16 @@
 <div class="login_bar">
-    <div id="logo">smooth</div>
-
     <%if current_user%>
+      <div id="logo"><a href="/<%=session[:user_id]%>">smooth</a></div>
       <ul id="setting">
         <li><a href="/<%=session[:user_id]%>/settings">Settings</a></li>
-        <li><a href='/logout'>Log Out</a></li>
+        <li><a href='/<%=session[:user_id]%>/logout'>Log Out</a></li>
       </ul>
     <%else%>
+      <div id="logo">smooth</div>
       <form method="post" action="/login" id="login_bar_ul">
         <input type="text" placeholder="username" name="username">
         <input type="password" placeholder="password" name="password">
         <input type="submit" class="button" value="login">
       </form>
     <%end%>
-
 </div>
